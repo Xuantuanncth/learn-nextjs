@@ -28,7 +28,7 @@ const ChartLayer = () => {
         });
     },[]);
 
-    function dataParser(inputArray){
+    function dataParser(inputArray:any){
         console.log("dataParser: ", inputArray);
         const p_data = inputArray.split(',');
         return p_data;
