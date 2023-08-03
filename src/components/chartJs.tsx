@@ -4,7 +4,7 @@ import { Bar,Line } from "react-chartjs-2";
 
 ChartJS.register( CategoryScale, LinearScale, BarElement,PointElement,LineElement, Title, Tooltip, Legend);
 
-const Chart = ({ data, type }) => {
+const Chart = ({ data, type }:{data:any; type:String}) => {
     const options = {
         responsive: true,
         plugins: {
