@@ -10,7 +10,7 @@ const ChartLayer = () => {
     const [type, setType] = useState("Bar")
 
     useEffect(() => {
-        const storeApi = "https://logic-project-66bbf-default-rtdb.firebaseio.com/Data.json"
+        const storeApi = "https://gravity-checker-86db2-default-rtdb.firebaseio.com/Data.json"
 
         const r_data = fetch(storeApi, {
             method:'GET',

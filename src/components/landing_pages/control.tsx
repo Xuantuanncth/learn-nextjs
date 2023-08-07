@@ -4,8 +4,8 @@ const ControlLayer = () => {
     const [start_data, setData] = useState(1);
     const [loading, setLoading] = useState(true);
 
-    const startApi = "https://logic-project-66bbf-default-rtdb.firebaseio.com/Start.json";
-    const pickApi  = "https://logic-project-66bbf-default-rtdb.firebaseio.com/Pick.json";
+    const startApi = "https://gravity-checker-86db2-default-rtdb.firebaseio.com/Start.json";
+    const pickApi  = "https://gravity-checker-86db2-default-rtdb.firebaseio.com/Pick.json";
 
     const setDataBase = (passApi: string) => {
         console.log("Api: ",passApi);
@@ -14,7 +14,7 @@ const ControlLayer = () => {
             headers:{
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(start_data)
+            body: JSON.stringify(1)
         }).then((response) => {
             if(!response.ok){
                 throw new Error('Network response was not ok');
@@ -25,7 +25,6 @@ const ControlLayer = () => {
         }).catch((error) => {
             console.error('Error updating user data:', error);
         });
-        setData(start_data+1);
     }
 
     function setPick() {
