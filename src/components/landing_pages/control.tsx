@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react';
 const ControlLayer = () => {
     const [start_data, setData] = useState(1);
     const [loading, setLoading] = useState(true);
+    const auth_key = "vv1t8hUYi3R4hXzDAJnluDdaoFelCNOK4mTB365z";
 
-    const startApi = "https://gravity-checker-86db2-default-rtdb.firebaseio.com/Start.json";
-    const pickApi  = "https://gravity-checker-86db2-default-rtdb.firebaseio.com/Pick.json";
+    const startApi = "https://gravity-checker-86db2-default-rtdb.firebaseio.com/Start.json?auth="+auth_key;
+    const pickApi  = "https://gravity-checker-86db2-default-rtdb.firebaseio.com/Pick.json?auth="+auth_key;
 
     const setDataBase = (passApi: string) => {
         console.log("Api: ",passApi);

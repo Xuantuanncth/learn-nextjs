@@ -10,7 +10,8 @@ const ChartLayer = () => {
     const [type, setType] = useState("Bar")
 
     useEffect(() => {
-        const storeApi = "https://gravity-checker-86db2-default-rtdb.firebaseio.com/Data.json"
+        const auth_key = "vv1t8hUYi3R4hXzDAJnluDdaoFelCNOK4mTB365z";
+        const storeApi = "https://gravity-checker-86db2-default-rtdb.firebaseio.com/Data.json?auth=" + auth_key;
 
         const r_data = fetch(storeApi, {
             method:'GET',
