@@ -9,7 +9,6 @@ const ControlLayer = () => {
     const pickApi  = "https://gravity-checker-86db2-default-rtdb.firebaseio.com/Pick.json?auth="+auth_key;
 
     const setDataBase = (passApi: string) => {
-        console.log("Api: ",passApi);
         fetch(passApi, {
             method:'PUT',
             headers:{
